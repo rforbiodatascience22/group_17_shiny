@@ -10,9 +10,31 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      h1("group17shiny")
+      titlePanel("Dogma Molecular Biology"),
+      sidebarLayout(
+        # --------------------------------------------------------------------------
+        # Side bar Panel
+        # --------------------------------------------------------------------------
+        sidebarPanel(
+          tags$form(
+            textInput(
+              inputId = "seq_for_plot", label = "Input Sequence",
+              placeholder = "ATGCCTTGTC"), actionButton("button", "Submit")
+        )),
+        # --------------------------------------------------------------------------
+        # Main Panel
+        # --------------------------------------------------------------------------
+        mainPanel(
+          # subsetting main panel into tabs
+          tabsetPanel(
+            type = "tabs",
+            # plots
+            tabPanel("Plot", plotOutput("plot"))
+          )
+        )
+      )
     )
-  )
+    )
 }
 
 #' Add external Resources to the Application
