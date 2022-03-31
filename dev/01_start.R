@@ -20,12 +20,12 @@
 ##
 golem::fill_desc(
   pkg_name = "group17shiny", # The Name of the package containing the App
-  pkg_title = "PKG_TITLE", # The Title of the package containing the App
+  pkg_title = "group17shiny", # The Title of the package containing the App
   pkg_description = "PKG_DESC.", # The Description of the package containing the App
   author_first_name = "Elena", # Your First Name
   author_last_name = "Krismer", # Your Last Name
   author_email = "elena.krismer@hotmail.com", # Your Email
-  repo_url = NULL # The URL of the GitHub Repo (optional)
+  repo_url = "https://github.com/rforbiodatascience22/group_17_shiny.git" # The URL of the GitHub Repo (optional)
 )
 
 ## Set {golem} options ----

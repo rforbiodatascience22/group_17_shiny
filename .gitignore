@@ -6,3 +6,6 @@
 group17shiny.Rcheck/
 group17shiny*.tar.gz
 group17shiny*.tgz
+inst/doc
+/doc/
+/Meta/

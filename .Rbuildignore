@@ -3,3 +3,11 @@
 ^group17shiny\.Rcheck$
 ^group17shiny.*\.tar\.gz$
 ^group17shiny.*\.tgz$
+^LICENSE\.md$
+^README\.Rmd$
+^CODE_OF_CONDUCT\.md$
+^data-raw$
+^doc$
+^Meta$
+^app\.R$
+^rsconnect$

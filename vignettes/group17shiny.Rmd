@@ -1,0 +1,19 @@
+---
+title: "group17shiny"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{group17shiny}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(group17shiny)
+```
