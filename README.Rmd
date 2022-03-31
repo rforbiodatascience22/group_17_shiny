@@ -30,7 +30,7 @@ You can install the development version of group17shiny from [GitHub](https://gi
 devtools::install_github("rforbiodatascience22/group_17_shiny")
 ```
 
-## Example
+## Example 
 
 This is a basic example which shows you how to solve a common problem:
 
