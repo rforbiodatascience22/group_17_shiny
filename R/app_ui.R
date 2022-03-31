@@ -10,26 +10,32 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      titlePanel("Dogma Molecular Biology"),
-      sidebarLayout(
+      #titlePanel("Dogma Molecular Biology"),
+      #sidebarLayout(
         # --------------------------------------------------------------------------
         # Side bar Panel
         # --------------------------------------------------------------------------
-        sidebarPanel(
-          tags$form(
-            textInput(
-              inputId = "seq_for_plot", label = "Input Sequence",
-              placeholder = "ATGCCTTGTC"), actionButton("button", "Submit")
-        )),
+        #sidebarPanel(
+        #tags$form(
+        #    textInput(
+        #      inputId = "seq_for_plot", label = "Input Sequence",
+        #      placeholder = "ATGCCTTGTC"), actionButton("button", "Submit")
+        #)),
         # --------------------------------------------------------------------------
         # Main Panel
         # --------------------------------------------------------------------------
-        mainPanel(
+        #mainPanel(
           # subsetting main panel into tabs
-          tabsetPanel(
-            type = "tabs",
+         # tabsetPanel(
+         #    type = "tabs",
             # plots
-            tabPanel("Plot", plotOutput("plot"))
+            #tabPanel("Plot", plotOutput("plot"))
+        h1("group17shiny"),
+        tabsetPanel(
+          tabPanel(title = "seq_for_plot",
+                   mod_seq_for_plot_ui("seq_for_plot_1")),
+          tabPanel(title = "Plot",
+                   mod_Plot_ui("Plot_1"))
           )
         )
       )
@@ -57,7 +63,8 @@ golem_add_external_resources <- function() {
       path = app_sys("app/www"),
       app_title = "group17shiny"
     )
-    # Add here other external resources
-    # for example, you can add shinyalert::useShinyalert()
+
+      # Add here other external resources
+      # for example, you can add shinyalert::useShinyalert()
   )
 }

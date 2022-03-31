@@ -45,7 +45,7 @@ usethis::use_test("app")
 # Documentation
 
 ## Vignette ----
-usethis::use_vignette("centralDogma")
+usethis::use_vignette("group17shiny")
 devtools::build_vignettes()
 
 ## Code Coverage----
