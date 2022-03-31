@@ -3,7 +3,7 @@
 #' @param input,output,session Internal parameters for {shiny}.
 #'     DO NOT REMOVE.
 #' @import shiny
-#' @import group17
+#' @importFrom magrittr %>%
 #' @noRd
 app_server <- function(input, output, session) {
   # wait till submit button is pressed
@@ -12,7 +12,9 @@ app_server <- function(input, output, session) {
   seq <- input$seq_for_plot
   # plot
   output$plot <- renderPlot({
-    group17::plot_base_occurrence(sequence = seq)
+    centralDogma::plot_abundance(sequence = seq)
   })
   })
 }
+
+# use the "centralDogma" packages from https://github.com/rforbiodatascience22/centralDogma
