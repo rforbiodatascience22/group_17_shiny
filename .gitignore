@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 .DS_store
+group17shiny.Rcheck/
+group17shiny*.tar.gz
+group17shiny*.tgz
