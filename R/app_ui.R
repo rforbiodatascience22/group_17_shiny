@@ -12,9 +12,9 @@ app_ui <- function(request) {
     fluidPage(
       h1("group17shiny"),
       tabsetPanel(
-        tabPanel(title = "Seqences for plotting",
+        tabPanel(title = "Creating amino acid sequences from nucleotide base",
                  mod_seq_for_plot_ui("seq_for_plot_1")),
-        tabPanel(title = "Plotting of amino acid",
+        tabPanel(title = "Frequency of amino acid from mRNA sequences",
                  mod_Plot_ui("Plot_1"))
       )
 
