@@ -1,0 +1,34 @@
+---
+title: "Group Assignment"
+output: pdf_document
+date: '2022-04-01'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Group: 17  
+Group members:  
+• Andre Fontes
+• Ewelina Holm Bistrup
+• Narong Nuanmuang
+• Elena Krismer
+
+
+## Discussions  
+# What did you find most challenging about creating a shiny app?  
+
+
+# What do you feel are the benefits and challenges with using golem for app development?  
+
+
+# Maintaining reproducibility when using shiny apps is a challenge. As an example, some pharma-companies display databases to medical doctors for pointy-clicky data exploration. What are your thoughts on maintaining reproducibility in that scenario? What if the database is updated or the app is updated with new or changed functionality?  
+
+
+# What other challenges and limitations do you see shiny apps may have? Please elaborate.  
+
+
+# Links to app and GitHub  
+[Shiny app](https://ei3vp1-narong-nuanmuang.shinyapps.io/group17shiny/)  
+[GitHub repo](https://github.com/rforbiodatascience22/group_17_shiny) 
