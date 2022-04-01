@@ -17,6 +17,7 @@ app_ui <- function(request) {
         tabPanel(title = "Plotting of amino acid",
                  mod_Plot_ui("Plot_1"))
       )
+
     )
   )
 }
