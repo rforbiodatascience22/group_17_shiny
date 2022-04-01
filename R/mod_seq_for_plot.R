@@ -9,25 +9,22 @@
 #' @importFrom shiny NS tagList
 mod_seq_for_plot_ui <- function(id){
   ns <- NS(id)
-  tagList(
-    fluidRow(
-      column(8, uiOutput(ns("DNA"))),
-
-      column(4, numericInput(
-        inputId = ns("dna_length"),
-        value = 6000,
-        min = 3,
-        max = 100000,
-        step = 3,
-        label = "Random DNA length"
-      )
-      , actionButton(
+  tagList(fluidRow(
+    column(8, shiny::uiOutput(ns("DNA"))),
+    column(4, shiny::numericInput(
+      inputId = ns("dna_length"),
+      value = 6000,
+      min = 3,
+      max = 100000,
+      step = 3,
+      label = "Random DNA length"),
+      shiny::actionButton(
         inputId = ns("generate_dna"),
         label = "Generate random DNA", style = "margin-top: 18px;"
       ))
-    ),
-    verbatimTextOutput(outputId = ns("peptide")) %>%
-      tagAppendAttributes(style = "white-space: pre-wrap;")
+  ),
+  shiny::verbatimTextOutput(outputId = ns("peptide")) %>%
+    shiny::tagAppendAttributes(style = "white-space: pre-wrap;")
 
   )
 }
@@ -38,9 +35,8 @@ mod_seq_for_plot_ui <- function(id){
 #' @noRd
 mod_seq_for_plot_server <- function(id){
   moduleServer( id, function(input, output, session){
-    ns <- session$ns
     dna <- reactiveVal()
-
+    ns <- session$ns
     output$DNA <- renderUI({
       textAreaInput(
         inputId = ns("DNA"),
@@ -48,16 +44,9 @@ mod_seq_for_plot_server <- function(id){
         placeholder = "Insert DNA sequence",
         value = dna(),
         height = 100,
-        width = 600
-      )
-    })
-
+        width = 600)})
     observeEvent(input$generate_dna, {
-      dna(
-        CentralDogma::generate_dna(input$dna_length)
-      )
-    })
-
+      dna(centralDogma::random_dna(input$dna_length))})
     output$peptide <- renderText({
       # Ensure input is not NULL and is longer than 2 characters
       if(is.null(input$DNA)){
@@ -67,9 +56,9 @@ mod_seq_for_plot_server <- function(id){
       } else{
         input$DNA %>%
           toupper() %>%
-          CentralDogma::mRNA() %>%
-          CentralDogma::make_codons() %>%
-          CentralDogma::translation()
+          centralDogma::transcribe() %>%
+          centralDogma::codon_split() %>%
+          centralDogma::translate()
       }
     })
 

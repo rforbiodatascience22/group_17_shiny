@@ -1,4 +1,4 @@
-#' Plot UI Function
+#' plot_amino_acid UI Function
 #'
 #' @description A shiny Module.
 #'
@@ -11,16 +11,14 @@ mod_Plot_ui <- function(id){
   ns <- NS(id)
   tagList(sidebarLayout(
     sidebarPanel(
-      textInput(ns("peptide_sequence"),
-                "Input peptide sequence",
-                value = "Enter peptide sequence"),
-      textOutput(ns("value"))
-    ),
-    mainPanel(
-      plotOutput(
-        outputId = ns("abundance")
-      )
-      #plotOutput("plot")
+      textAreaInput(
+        inputId = ns("peptide"),
+        label = "Peptide sequence",
+        width = 300,
+        height = 100,
+        placeholder = "Insert peptide sequence")),
+    mainPanel(plotOutput(
+      outputId = ns("abundance"))
     )
   )
 
@@ -35,15 +33,15 @@ mod_Plot_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
     output$abundance <- renderPlot({
-      if(input$peptide_sequence %in% c("",
-                                       "Enter peptide sequence")){
+      if(input$peptide == ""){
         NULL
       } else{
-        input$peptide_sequence %>%
-          CentralDogma::visualize_aa_counts() +
+        input$peptide %>%
+          centralDogma::plot_abundance() +
           ggplot2::theme(legend.position = "none")
       }
     })
+
   })
 }
 
