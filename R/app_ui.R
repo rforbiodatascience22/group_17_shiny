@@ -21,32 +21,6 @@ app_ui <- function(request) {
   )
 }
 
-#' titlePanel("Dogma Molecular Biology"),
-#' sidebarLayout(
-#' --------------------------------------------------------------------------
-#' Side bar Panel
-#' --------------------------------------------------------------------------
-#' sidebarPanel(
-#' tags$form(
-#'    textInput(
-#'      inputId = "seq_for_plot", label = "Input Sequence",
-#'      placeholder = "ATGCCTTGTC"), actionButton("button", "Submit")
-#' )),
-#' --------------------------------------------------------------------------
-#' Main Panel
-#' --------------------------------------------------------------------------
-#' mainPanel(
-#' subsetting main panel into tabs
-#' tabsetPanel(
-#' type = "tabs",
-#' plots
-#' tabPanel("Plot", plotOutput("plot"))
-
-
-#' Add external Resources to the Application
-#'
-#' This function is internally used to add external
-#' resources inside the Shiny application.
 #'
 #' @import shiny
 #' @importFrom golem add_resource_path activate_js favicon bundle_resources
@@ -64,8 +38,7 @@ golem_add_external_resources <- function() {
       path = app_sys("app/www"),
       app_title = "group17shiny"
     )
-
-      # Add here other external resources
-      # for example, you can add shinyalert::useShinyalert()
+    # Add here other external resources
+    # for example, you can add shinyalert::useShinyalert()
   )
 }
