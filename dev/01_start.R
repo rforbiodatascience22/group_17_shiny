@@ -21,7 +21,7 @@
 golem::fill_desc(
   pkg_name = "group17shiny", # The Name of the package containing the App
   pkg_title = "group17shiny", # The Title of the package containing the App
-  pkg_description = "Description coming.", # The Description of the package containing the App
+  pkg_description = "central dogma of molecular biology.", # The Description of the package containing the App
   author_first_name = "Elena", # Your First Name
   author_last_name = "Krismer", # Your Last Name
   author_email = "s202425@student.dtu.dk", # Your Email
