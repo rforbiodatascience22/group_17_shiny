@@ -21,10 +21,17 @@
 golem::fill_desc(
   pkg_name = "group17shiny", # The Name of the package containing the App
   pkg_title = "group17shiny", # The Title of the package containing the App
-  pkg_description = "central dogma of molecular biology.", # The Description of the package containing the App
-  author_first_name = "Elena", # Your First Name
-  author_last_name = "Krismer", # Your Last Name
-  author_email = "s202425@student.dtu.dk", # Your Email
+  pkg_description = "Central dogma of molecular biology.", # The Description of the package containing the App
+  Author@R:
+    c(person(given = "Elena",
+             family = "Krismer",
+             role = c("cre"), # There must be a "cre", but there can only be one
+             email = "s202425@student.dtu.dk"),
+      person(given = "Ewelina",
+             family = "Holm Bidstrup",
+             role = "aut",
+             email = "s205980@student.dtu.dk")
+      )
   repo_url = NULL # The URL of the GitHub Repo (optional)
 )
 
