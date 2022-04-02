@@ -18,7 +18,7 @@ Group members:
 
 ## Discussions  
 # What did you find most challenging about creating a shiny app?  
-Understanding of app structures and functions including organizing the outlooks.
+Understanding of the app structures and functions including organizing the outlooks.
 
 # What do you feel are the benefits and challenges with using golem for app development?  
 The golem shiny app is systemic and applicable function for other data.
