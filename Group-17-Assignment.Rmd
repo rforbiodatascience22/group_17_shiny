@@ -29,7 +29,7 @@ The pharma-company app concept should be easier and better than the previous ver
 # What other challenges and limitations do you see shiny apps may have? Please elaborate.  
 There are many options for creating primary layout and module, the new developer need time to learn the app and find the proper outlook with their own user.
 
-
 # Links to app and GitHub  
-[Shiny app](https://ei3vp1-narong-nuanmuang.shinyapps.io/group17shiny/)  
+[Shiny app](https://ei3vp1-narong-nuanmuang.shinyapps.io/group17shiny/) 
 [GitHub repo](https://github.com/rforbiodatascience22/group_17_shiny) 
+
