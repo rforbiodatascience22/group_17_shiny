@@ -24,10 +24,10 @@ Understanding of the app structures and functions including organizing the outlo
 The golem shiny app is systemic and applicable function for other data.
 
 # Maintaining reproducibility when using shiny apps is a challenge. As an example, some pharma-companies display databases to medical doctors for pointy-clicky data exploration. What are your thoughts on maintaining reproducibility in that scenario? What if the database is updated or the app is updated with new or changed functionality?  
-The pharma-company app concept should be easier and better than last version. The changed functionality might give medical doctors feel unfamiliar with new outlook and need time to use the app.
+The pharma-company app concept should be easier and better than the previous version. The changed functionality might give medical doctors feel unfamiliar with the new outlook and need time to be familiar and use the app.
 
 # What other challenges and limitations do you see shiny apps may have? Please elaborate.  
-There are many options for creating primary layout and module, the new developer need time to learn and find the proper with their own user.
+There are many options for creating primary layout and module, the new developer need time to learn the app and find the proper outlook with their own user.
 
 
 # Links to app and GitHub  
